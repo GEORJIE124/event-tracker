@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a68cb64b47d402106f58cbb9316d4363" label="Innovate" max_length="40" name="x_1317492_innovate_innovate" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Assigned to" max_length="40" name="assigned_to" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Idea type" mandatory="true" max_length="40" name="idea_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cost Savings" value="cost_savings"/>
+                <element inactive_on_update="false" label="Process Improvement" value="process_improvement"/>
+                <element inactive_on_update="false" label="Team Building" value="team_building"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Review status" max_length="40" name="revierw_status" type="choice">
+            <choice/>
+        </element>
+        <element choice="3" default="not started" display="true" label="Review status" max_length="40" name="review_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="-- New choice --" value="-- New choice --"/>
+                <element inactive_on_update="false" label="Not started" sequence="1" value="not started"/>
+                <element inactive_on_update="false" label="In progress" sequence="2" value="in progress"/>
+                <element inactive_on_update="false" label="Reviewed" sequence="3" value="reviewed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Short description" mandatory="true" max_length="125" name="short_description" type="string"/>
+    </element>
+</database>
